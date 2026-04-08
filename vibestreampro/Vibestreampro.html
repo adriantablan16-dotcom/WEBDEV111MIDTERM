@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Adrian Music</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#20b153;
+    color:white;
+}
+
+/* LOGIN */
+.login-container{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-container input{
+    margin:10px;
+    padding:10px;
+    width:220px;
+    border:none;
+    border-radius:5px;
+}
+
+.login-container button{
+    padding:10px 20px;
+    background:#1db954;
+    border:none;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+#error{
+    color:red;
+}
+
+/* MUSIC PAGE */
+.music-container{
+    display:none;
+    height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:black;
+    padding:20px;
+    float:left;
+    height:100%;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:10px;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#1db954;
+}
+
+.player{
+    margin-left:250px;
+    padding:50px;
+}
+
+.logout{
+    margin-top:20px;
+    padding:8px 15px;
+    background:red;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-container" id="loginPage">
+    <h1>Adrian Music</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+</div>
+
+<!-- MUSIC LIBRARY -->
+<div class="music-container" id="musicPage">
+    <div class="sidebar">
+        <h2>Library</h2>
+        <ul>
+            <li onclick="playSong(0)">Die on this hill</li>
+            <li onclick="playSong(1)">Risk it all</li>
+            <li onclick="playSong(2)">Psycho</li>
+            <li onclick="playSong(3)">Luther</li>
+            <li onclick="playSong(4)">Best Part</li>
+        </ul>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="player">
+        <h2 id="nowPlaying">Select a song</h2>
+        <audio id="audioPlayer" controls style="width:100%;"></audio>
+    </div>
+</div>
+
+<script>
+const songs = [
+    "Die on this hill.mp3",
+    "Risk it all.mp3",
+    "Psycho.mp3",
+    "Luther.mp3",
+    "Best Part.mp3"
+];
+
+function login(){
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if(user === "tablan2005" && pass === "12345678"){
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("musicPage").style.display = "block";
+    }else{
+        document.getElementById("error").innerText = "Invalid login!";
+    }
+}
+
+function logout(){
+    document.getElementById("musicPage").style.display = "none";
+    document.getElementById("loginPage").style.display = "flex";
+}
+
+function playSong(index){
+    const player = document.getElementById("audioPlayer");
+    const nowPlaying = document.getElementById("nowPlaying");
+
+    player.src = songs[index];
+    player.play();
+    nowPlaying.innerText = "Now Playing: Song " + (index + 1);
+}
+</script>
+
+</body>
+</html>
+</html>
+</html>
+</html>
