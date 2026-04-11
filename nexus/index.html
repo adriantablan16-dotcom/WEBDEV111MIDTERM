@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nexus Event</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0f1a;
+            color: #e0e6ff;
+        }
+
+        header {
+            background: linear-gradient(to right, #111827, #020617);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 3px;
+            color: #60a5fa;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #9ca3af;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            height: 85vh;
+            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.6);
+            padding: 25px;
+            border-radius: 10px;
+            font-size: 48px;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 20px;
+            width: 260px;
+            border-radius: 10px;
+            border: 1px solid #1f2937;
+        }
+
+        .card h3 {
+            color: #60a5fa;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #3b82f6;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #1f2937;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NEXUS EVENT</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>When Timelines Collide</h2>
+</div>
+
+<div class="section" id="about">
+    <h2>About Nexus Event</h2>
+    <p>
+        A Nexus Event occurs when the natural flow of time is disrupted, 
+        creating alternate realities and unpredictable consequences. 
+        Step into the multiverse and explore the unknown.
+    </p>
+</div>
+
+<div class="section" id="events">
+    <h2>Key Events</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Timeline Break</h3>
+            <p>A critical divergence that alters destiny forever.</p>
+            <button onclick="alertEvent('Timeline Break')">Explore</button>
+        </div>
+
+        <div class="card">
+            <h3>Variant Encounter</h3>
+            <p>Meet alternate versions of yourself across realities.</p>
+            <button onclick="alertEvent('Variant Encounter')">Explore</button>
+        </div>
+
+        <div class="card">
+            <h3>Reality Collapse</h3>
+            <p>When multiple universes merge into chaos.</p>
+            <button onclick="alertEvent('Reality Collapse')">Explore</button>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: nexus@multiverse.com</p>
+    <button onclick="join()">Join the Timeline</button>
+</div>
+
+<footer>
+    <p>© 2026 Nexus Event. All timelines reserved.</p>
+</footer>
+
+<script>
+    function alertEvent(eventName) {
+        alert("You selected: " + eventName);
+    }
+
+    function join() {
+        alert("Welcome to the Nexus Event!");
+    }
+</script>
+
+</body>
+</html>
