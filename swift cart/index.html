@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Cart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #333;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 75vh;
+            background: url('https://images.unsplash.com/photo-1607082349566-187342175e2f') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 45px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .product h3 {
+            margin: 0;
+            color: #0f172a;
+        }
+
+        .price {
+            color: #ef4444;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background: #0f172a;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e293b;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Swift Cart</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Fast Shopping. Faster Delivery.</h2>
+</div>
+
+<div class="section" id="products">
+    <h2>Featured Products</h2>
+    <div class="products">
+        <div class="product">
+            <h3>Wireless Headphones</h3>
+            <p>High quality sound with noise cancellation.</p>
+            <div class="price">₱1,200</div>
+            <button onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Smart Watch</h3>
+            <p>Track your fitness and notifications.</p>
+            <div class="price">₱2,500</div>
+            <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Portable Speaker</h3>
+            <p>Powerful sound in a compact design.</p>
+            <div class="price">₱900</div>
+            <button onclick="addToCart('Portable Speaker')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>About Swift Cart</h2>
+    <p>
+        Swift Cart is your go-to online shopping platform for fast, reliable, 
+        and affordable products delivered straight to your door.
+    </p>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@swiftcart.com</p>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<footer>
+    <p>© 2026 Swift Cart. All rights reserved.</p>
+</footer>
+
+<script>
+    function addToCart(product) {
+        alert(product + " added to cart!");
+    }
+
+    function checkout() {
+        alert("Proceeding to checkout...");
+    }
+</script>
+
+</body>
+</html>
