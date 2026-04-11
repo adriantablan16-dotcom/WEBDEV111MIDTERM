@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luna Vista</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d1a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(to right, #1a1a40, #000);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #ccc;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background: #6c63ff;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4b47cc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Luna Vista</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Experience the Beauty of the Night</h2>
+</div>
+
+<div class="section" id="about">
+    <h2>About Luna Vista</h2>
+    <p>
+        Luna Vista is your gateway to breathtaking night views, peaceful landscapes, 
+        and unforgettable experiences under the stars.
+    </p>
+</div>
+
+<div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Night Tours</h3>
+            <p>Explore scenic locations guided under moonlight.</p>
+        </div>
+        <div class="card">
+            <h3>Photography</h3>
+            <p>Capture stunning night sky and landscapes.</p>
+        </div>
+        <div class="card">
+            <h3>Relaxation Spots</h3>
+            <p>Enjoy peaceful environments away from city noise.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: lunavista@email.com</p>
+    <button onclick="showMessage()">Book Now</button>
+</div>
+
+<footer>
+    <p>© 2026 Luna Vista. All rights reserved.</p>
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Thank you for your interest in Luna Vista!");
+    }
+</script>
+
+</body>
+</html>
