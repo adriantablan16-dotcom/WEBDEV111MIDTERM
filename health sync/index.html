@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Sync</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f9ff;
+            color: #333;
+        }
+
+        header {
+            background: #0ea5e9;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #e0f2fe;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .feature h3 {
+            color: #0ea5e9;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #0ea5e9;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0284c7;
+        }
+
+        footer {
+            background: #0ea5e9;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Health Sync</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Your Health, Connected & Simplified</h2>
+</div>
+
+<div class="section" id="features">
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Track Activity</h3>
+            <p>Monitor your daily steps, workouts, and calories burned.</p>
+            <button onclick="featureMsg('Track Activity')">Learn More</button>
+        </div>
+
+        <div class="feature">
+            <h3>Heart Rate Monitor</h3>
+            <p>Keep an eye on your heart health in real time.</p>
+            <button onclick="featureMsg('Heart Rate Monitor')">Learn More</button>
+        </div>
+
+        <div class="feature">
+            <h3>Sleep Analysis</h3>
+            <p>Understand your sleep patterns and improve rest quality.</p>
+            <button onclick="featureMsg('Sleep Analysis')">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>About Health Sync</h2>
+    <p>
+        Health Sync is a smart health tracking platform designed to help you stay 
+        connected with your body and achieve a healthier lifestyle.
+    </p>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: support@healthsync.com</p>
+    <button onclick="joinNow()">Get Started</button>
+</div>
+
+<footer>
+    <p>© 2026 Health Sync. Stay Healthy!</p>
+</footer>
+
+<script>
+    function featureMsg(name) {
+        alert("Feature selected: " + name);
+    }
+
+    function joinNow() {
+        alert("Welcome to Health Sync!");
+    }
+</script>
+
+</body>
+</html>
