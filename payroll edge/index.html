@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payroll Edge</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #333;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 75vh;
+            background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 42px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .payroll-form {
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .payroll-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0f172a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e293b;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Payroll Edge</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Smart Payroll. Simplified.</h2>
+</div>
+
+<div class="section" id="calculator">
+    <h2>Payroll Calculator</h2>
+    <div class="payroll-form">
+        <input type="text" id="name" placeholder="Employee Name">
+        <input type="number" id="hours" placeholder="Hours Worked">
+        <input type="number" id="rate" placeholder="Hourly Rate (₱)">
+        <input type="number" id="deductions" placeholder="Deductions (₱)">
+        <button onclick="calculatePay()">Calculate Salary</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>About Payroll Edge</h2>
+    <p>
+        Payroll Edge is designed to simplify employee salary computation, 
+        making payroll processing faster, accurate, and efficient.
+    </p>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@payrolledge.com</p>
+</div>
+
+<footer>
+    <p>© 2026 Payroll Edge. All rights reserved.</p>
+</footer>
+
+<script>
+    function calculatePay() {
+        const name = document.getElementById("name").value;
+        const hours = parseFloat(document.getElementById("hours").value);
+        const rate = parseFloat(document.getElementById("rate").value);
+        const deductions = parseFloat(document.getElementById("deductions").value);
+
+        if (!name || isNaN(hours) || isNaN(rate) || isNaN(deductions)) {
+            alert("Please fill in all fields correctly.");
+            return;
+        }
+
+        const gross = hours * rate;
+        const net = gross - deductions;
+
+        document.getElementById("result").innerHTML =
+            "Employee: " + name + "<br>" +
+            "Gross Pay: ₱" + gross.toFixed(2) + "<br>" +
+            "Net Pay: ₱" + net.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
