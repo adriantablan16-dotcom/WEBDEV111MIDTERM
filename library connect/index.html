@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Connect</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f4;
+            color: #333;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 75vh;
+            background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 42px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .books {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .book {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .book h3 {
+            margin: 0;
+            color: #1e293b;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #1e293b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #334155;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Library Connect</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Connect. Read. Learn.</h2>
+</div>
+
+<div class="section" id="catalog">
+    <h2>Book Catalog</h2>
+    <div class="books">
+        <div class="book">
+            <h3>The Great Adventure</h3>
+            <p>Author: John Smith</p>
+            <button onclick="borrow('The Great Adventure')">Borrow</button>
+        </div>
+
+        <div class="book">
+            <h3>Learning Web Design</h3>
+            <p>Author: Jane Doe</p>
+            <button onclick="borrow('Learning Web Design')">Borrow</button>
+        </div>
+
+        <div class="book">
+            <h3>Science of Tomorrow</h3>
+            <p>Author: Albert Cruz</p>
+            <button onclick="borrow('Science of Tomorrow')">Borrow</button>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>About Library Connect</h2>
+    <p>
+        Library Connect is a digital platform designed to make accessing books 
+        easier and more convenient for everyone. Discover, borrow, and enjoy reading anytime.
+    </p>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: libraryconnect@email.com</p>
+    <button onclick="join()">Join Now</button>
+</div>
+
+<footer>
+    <p>© 2026 Library Connect. All rights reserved.</p>
+</footer>
+
+<script>
+    function borrow(book) {
+        alert("You borrowed: " + book);
+    }
+
+    function join() {
+        alert("Welcome to Library Connect!");
+    }
+</script>
+
+</body>
+</html>
