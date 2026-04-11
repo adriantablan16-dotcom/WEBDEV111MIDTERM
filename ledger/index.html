@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Ledger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        .income {
+            color: green;
+        }
+        .expense {
+            color: red;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 15px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ledger System</h1>
+
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+    
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <button onclick="addEntry()">Add Entry</button>
+
+    <table id="ledgerTable">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="total">
+        Balance: ₱<span id="balance">0</span>
+    </div>
+</div>
+
+<script>
+    let balance = 0;
+
+    function addEntry() {
+        const desc = document.getElementById("desc").value;
+        const amount = parseFloat(document.getElementById("amount").value);
+        const type = document.getElementById("type").value;
+
+        if (!desc || isNaN(amount)) {
+            alert("Please enter valid data.");
+            return;
+        }
+
+        const table = document.getElementById("ledgerTable").querySelector("tbody");
+        const row = table.insertRow();
+
+        row.insertCell(0).innerText = desc;
+        row.insertCell(1).innerText = "₱" + amount.toFixed(2);
+        row.insertCell(2).innerText = type;
+
+        row.cells[2].classList.add(type);
+
+        if (type === "income") {
+            balance += amount;
+        } else {
+            balance -= amount;
+        }
+
+        document.getElementById("balance").innerText = balance.toFixed(2);
+
+        // Clear inputs
+        document.getElementById("desc").value = "";
+        document.getElementById("amount").value = "";
+    }
+</script>
+
+</html>
+</body>
