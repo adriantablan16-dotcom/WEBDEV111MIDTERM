@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Bite</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0fff4;
+            color: #333;
+        }
+
+        header {
+            background: #16a34a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #dcfce7;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 75vh;
+            background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 45px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .item {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .item h3 {
+            margin: 0;
+            color: #16a34a;
+        }
+
+        .price {
+            color: #dc2626;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #16a34a;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #15803d;
+        }
+
+        footer {
+            background: #16a34a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fresh Bite</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Eat Fresh. Live Healthy.</h2>
+</div>
+
+<div class="section" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu">
+        <div class="item">
+            <h3>Green Salad Bowl</h3>
+            <p>Fresh veggies with light vinaigrette.</p>
+            <div class="price">₱150</div>
+            <button onclick="order('Green Salad Bowl')">Order</button>
+        </div>
+
+        <div class="item">
+            <h3>Grilled Chicken Wrap</h3>
+            <p>Healthy grilled chicken with fresh greens.</p>
+            <div class="price">₱180</div>
+            <button onclick="order('Grilled Chicken Wrap')">Order</button>
+        </div>
+
+        <div class="item">
+            <h3>Fruit Smoothie</h3>
+            <p>Blend of fresh fruits and natural sweetness.</p>
+            <div class="price">₱120</div>
+            <button onclick="order('Fruit Smoothie')">Order</button>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>About Fresh Bite</h2>
+    <p>
+        Fresh Bite is dedicated to serving healthy and delicious meals made from 
+        fresh, locally sourced ingredients to keep you energized and happy.
+    </p>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: freshbite@email.com</p>
+    <p>Phone: 0912-345-6789</p>
+</div>
+
+<footer>
+    <p>© 2026 Fresh Bite. Stay Fresh!</p>
+</footer>
+
+<script>
+    function order(item) {
+        alert("You ordered: " + item);
+    }
+</script>
+
+</body>
+</html>
